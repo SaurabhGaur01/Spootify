@@ -1,7 +1,7 @@
 # Spootify - React
 This application will mimics the looks of a famous music player we all know. This app is using the API of Spotify to get and show the latest releases, featured playlist and the ability to browse different genres
 
-Click on [Demo](https://saurabhgaur01.github.io/spootify/) for quick view.
+Click on [Demo](https://saurabhgaur01.github.io/Spootify/) for quick view.
 ## Installation & Usage
 
 Use the package manager [Node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to run this project on your local. After installing, run below command to install all dependencies-
