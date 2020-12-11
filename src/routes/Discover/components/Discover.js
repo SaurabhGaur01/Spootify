@@ -12,14 +12,14 @@ const Discover = () => {
   // Making API calls and updating state when component renders on mount
   useEffect(() => {
     Promise.all([
-      makeRequest('new-releases'),
+      makeRequest('new-releases11'),
       makeRequest('featured-playlists'),
       makeRequest('categories')
     ]).then(result => {
       const [ newReleaseData, featuredPlaylistData, categoriesData ] = result;
-      const { data: { albums: { items: newReleases }}} = newReleaseData;
-      const { data: { playlists: { items: playlists }}} = featuredPlaylistData;
-      const { data: { categories: { items: categories }}} = categoriesData;
+      const { data: { albums: { items: newReleases = [] } = {} } = {}} = newReleaseData;
+      const { data: { playlists: { items: playlists = [] } = {} } = {}} = featuredPlaylistData;
+      const { data: { categories: { items: categories = [] } = {} } = {}} = categoriesData;
       setNewReleases(newReleases);
       setPlaylists(playlists);
       setCategories(categories);
