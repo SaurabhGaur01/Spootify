@@ -12,7 +12,7 @@ const Discover = () => {
   // Making API calls and updating state when component renders on mount
   useEffect(() => {
     Promise.all([
-      makeRequest('new-releases11'),
+      makeRequest('new-releases'),
       makeRequest('featured-playlists'),
       makeRequest('categories')
     ]).then(result => {

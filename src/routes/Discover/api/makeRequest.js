@@ -4,7 +4,7 @@ import config from '../../../config';
 
 const { api } = config;
 
-export default async function makeRequest(path) {
+const makeRequest = async (path) => {
   try{
     const { data: { access_token: token } } = await axios.post(
       api.authUrl,
@@ -31,3 +31,5 @@ export default async function makeRequest(path) {
     };
   }
 }
+
+export default makeRequest;
