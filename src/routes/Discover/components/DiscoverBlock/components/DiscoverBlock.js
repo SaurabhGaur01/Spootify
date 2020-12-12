@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import DiscoverItem from './DiscoverItem';
@@ -13,7 +14,12 @@ const scrollContainer = (id, { isNegative } = {}) =>{
   };
 }
 
-const DiscoverBlock = ({ text, id, data, imagesKey = 'images' }) => (
+const DiscoverBlock = ({ 
+  text, 
+  id, 
+  data, 
+  imagesKey 
+}) => (
   <div className="discover-block">
     <div className="discover-block__header">
       <h2>{text}</h2>
@@ -40,5 +46,17 @@ const DiscoverBlock = ({ text, id, data, imagesKey = 'images' }) => (
     </div>
   </div>
 );
+
+DiscoverBlock.propTypes = {
+  text: PropTypes.string.isRequired,
+  imagesKey: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+DiscoverBlock.defaultProps = {
+  imagesKey: 'images',
+  data: [],
+}
 
 export default DiscoverBlock;
