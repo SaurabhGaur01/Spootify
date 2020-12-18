@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`playlists Duck Tests Action Generator clearPlaylistsData should match the snapshot 1`] = `
+Object {
+  "type": "modules/spootify-app/CLEAR_PLAYLISTS_DATA",
+}
+`;
+
+exports[`playlists Duck Tests Action Generator setPlaylistsData should match the snapshot 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "mockVariable": "mockValue",
+    },
+  ],
+  "type": "modules/spootify-app/SET_PLAYLISTS_DATA",
+}
+`;

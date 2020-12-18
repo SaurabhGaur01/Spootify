@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`newReleases Duck Tests Action Generator clearReleasesData should match the snapshot 1`] = `
+Object {
+  "type": "modules/spootify-app/CLEAR_RELEASES_DATA",
+}
+`;
+
+exports[`newReleases Duck Tests Action Generator setReleasesData should match the snapshot 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "mockVariable": "mockValue",
+    },
+  ],
+  "type": "modules/spootify-app/SET_RELEASES_DATA",
+}
+`;
